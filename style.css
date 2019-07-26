@@ -15,6 +15,10 @@ header a {
     color: white;
 }
 
+.header-right {
+    float: right;
+}
+
 #item-list-container {
     overflow: hidden;
 }

@@ -23,9 +23,7 @@ function purchase() {
         type: 'post',
         dataType: 'json',
         beforeSend: function (xhr) {
-            const username = 'admin';
-            const password = 'admin';
-            xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
+            xhr.setRequestHeader("Authorization", localStorage.getItem('authorization'));
         },
     }).done((result) => {
         location.href = '/my-items.html';
